@@ -47,7 +47,7 @@ public class ClienteService {
     }
 
     @Transactional
-    public ClienteResponseDTO atualizarJogador(Long id, ClienteRequestDTO clienteDTO) {
+    public ClienteResponseDTO atualizarCliente(Long id, ClienteRequestDTO clienteDTO) {
         ClienteModel clienteExistente = repository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Este cliente não existe!"));
 

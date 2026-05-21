@@ -2,15 +2,16 @@ package com.example.AtividadePontuada02.dto;
 
 public class ClienteResponseDTO {
     private String nome;
-    private String DataNascimento;
+    private String dataNascimento; // CORRIGIDO: 'data' com d minúsculo
     private String email;
 
     public ClienteResponseDTO() {
     }
 
+    // CORRIGIDO: Agora o parâmetro e a atribuição usam os nomes idênticos
     public ClienteResponseDTO(String nome, String dataNascimento, String email) {
         this.nome = nome;
-        DataNascimento = dataNascimento;
+        this.dataNascimento = dataNascimento;
         this.email = email;
     }
 
@@ -23,11 +24,11 @@ public class ClienteResponseDTO {
     }
 
     public String getDataNascimento() {
-        return DataNascimento;
+        return dataNascimento;
     }
 
     public void setDataNascimento(String dataNascimento) {
-        DataNascimento = dataNascimento;
+        this.dataNascimento = dataNascimento;
     }
 
     public String getEmail() {
@@ -38,4 +39,3 @@ public class ClienteResponseDTO {
         this.email = email;
     }
 }
-
